@@ -39,6 +39,11 @@
                                         style="height: 100px" v-model="structure"></textarea>
                                 </div>
 
+                                <div class="form-floating mb-3">
+                                    <label for="floatingTextarea2">Widget Script</label>
+                                    <textarea class="form-control" style="height: 100px" disabled v-model="config"></textarea>
+                                </div>
+
                                 <router-link class="btn btn-secondary btn-lg mr-2" to="/">Cancel</router-link>
                                 <button type="submit" class="btn btn-primary btn-lg">Update</button>
                             </form>
@@ -58,6 +63,7 @@ export default {
             apiKey: '',
             style: '',
             structure: '',
+            config: '',
         }
     },
     mounted() {
@@ -73,6 +79,8 @@ export default {
                 this.apiKey = data.apiKey,
                 this.style = data.body.style ? atob(data.body.style) : '';
                 this.structure = data.body.structure ? atob(data.body.structure) : '';
+                this.config = data.apiKey ? `!function (e, n, i, p, t, f) { e.pricingFlow = p, e.pf = e.pf || function () { (e.pf.q = e.pf.q || []).push(arguments)}, e.pf.l = +new Date, t = n.createElement(i), f = n.getElementsByTagName(i)[0], t.async = 1, t.src ="http://localhost:3000/cdn/pricingflow.js", f.parentNode.insertBefore(t, f) }(window, document, "script", "pf"),pf("init", { apikey: ${data.apiKey} });` : ''
+
             })
     },
     methods: {
