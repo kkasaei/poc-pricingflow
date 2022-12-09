@@ -19,7 +19,7 @@ const widgetSchema = new mongoose.Schema({
   isPublished: {
     required: false,
     type: Boolean,
-  }
+  },
 });
 
 module.exports = mongoose.model("Widget", widgetSchema);
