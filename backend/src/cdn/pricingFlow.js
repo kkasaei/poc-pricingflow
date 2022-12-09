@@ -1,6 +1,8 @@
 const renderHTML = (payload) => {
   const widget = JSON.parse(payload)
-  return `${atob(widget.body.styles)}${atob(widget.body.structure)}`;
+  return `${atob(widget.body.style)}${atob(
+    widget.body.structure
+  )}`;
 };
 
 const supportedAPI = ["init"];
