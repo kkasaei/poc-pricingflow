@@ -1,0 +1,21 @@
+{
+  "name": "demo-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compress": "gulp",
+    "dev": "concurrently \"cd backend && yarn dev\" \"cd client && yarn serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "readable-stream": "^4.2.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
