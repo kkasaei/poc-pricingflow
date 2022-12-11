@@ -8,6 +8,7 @@
         <div class="col-6">
           <div class="d-flex flex-row-reverse">
             <router-link to="/new" class="btn btn-primary">New Widget</router-link>
+            <router-link to="/editor" class="btn btn-link">Editor</router-link>
           </div>
         </div>
       </div>
